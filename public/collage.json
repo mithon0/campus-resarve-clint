@@ -1,0 +1,323 @@
+[
+    {
+        "college_image": "https://images.unsplash.com/photo-1623632306901-e509641e7191?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+        "college_name": "cambridge collage",
+        "college_rating": 4.5,
+        "admission_date": "2023-09-01",
+        "number_of_research": 120,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "Annual Cultural Fest",
+              "event_date": "2023-12-15"
+            },
+            {
+              "event_name": "Science Expo",
+              "event_date": "2024-03-10"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Football",
+              "available": true
+            },
+            {
+              "sport_name": "Basketball",
+              "available": true
+            },
+            {
+              "sport_name": "Swimming",
+              "available": false
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+      },
+      {
+        "college_image": "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1143&q=80",
+        "college_name": "Academic Heights University",
+        "college_rating": 4.7,
+        "admission_date": "2023-09-01",
+        "number_of_research": 80,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "Annual Cultural Fest",
+              "event_date": "2023-12-15"
+            },
+            {
+              "event_name": "Science Exhibition",
+              "event_date": "2024-03-10"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Football",
+              "available": true
+            },
+            {
+              "sport_name": "Basketball",
+              "available": true
+            },
+            {
+              "sport_name": "Tennis",
+              "available": true
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+      },
+      {
+        "college_image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+        "college_name": "Innovation Institute of Technology",
+        "college_rating": 4.5,
+        "admission_date": "2023-08-20",
+        "number_of_research": 120,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "TechFest",
+              "event_date": "2023-11-25"
+            },
+            {
+              "event_name": "Innovation Summit",
+              "event_date": "2024-02-15"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Cricket",
+              "available": true
+            },
+            {
+              "sport_name": "Volleyball",
+              "available": true
+            },
+            {
+              "sport_name": "Swimming",
+              "available": false
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+      },
+      {
+        "college_image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/68/a2/b8/getlstd-property-photo.jpg?w=1100&h=-1&s=1",
+        "college_name": "Nature's Paradise College",
+        "college_rating": 4.2,
+        "admission_date": "2023-07-15",
+        "number_of_research": 50,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "Green Earth Day",
+              "event_date": "2023-10-05"
+            },
+            {
+              "event_name": "Eco Fest",
+              "event_date": "2024-04-22"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Hiking",
+              "available": true
+            },
+            {
+              "sport_name": "Cycling",
+              "available": true
+            },
+            {
+              "sport_name": "Yoga",
+              "available": true
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+      },
+      {
+        "college_image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80",
+        "college_name": "Global Business School",
+        "college_rating": 4.6,
+        "admission_date": "2023-08-30",
+        "number_of_research": 90,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "International Business Summit",
+              "event_date": "2023-12-01"
+            },
+            {
+              "event_name": "Entrepreneurship Fair",
+              "event_date": "2024-03-20"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Soccer",
+              "available": true
+            },
+            {
+              "sport_name": "Golf",
+              "available": true
+            },
+            {
+              "sport_name": "Table Tennis",
+              "available": true
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+      },
+      {
+        "college_image": "https://images.unsplash.com/photo-1613665967627-88e4064bb30d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80",
+        "college_name": "Artistic Expressions College",
+        "college_rating": 5,
+        "admission_date": "2023-09-05",
+        "number_of_research": 70,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "Art Gala",
+              "event_date": "2023-11-20"
+            },
+            {
+              "event_name": "Film Festival",
+              "event_date": "2024-03-05"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Painting",
+              "available": true
+            },
+            {
+              "sport_name": "Dance",
+              "available": true
+            },
+            {
+              "sport_name": "Theater",
+              "available": true
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+        
+      },
+      {
+        "college_image": "https://images.unsplash.com/photo-1671854727698-bfbad75cc7c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+        "college_name": "Health Sciences Institute",
+        "college_rating": 4,
+        "admission_date": "2023-08-25",
+        "number_of_research": 150,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "Medical Symposium",
+              "event_date": "2023-12-10"
+            },
+            {
+              "event_name": "Health Expo",
+              "event_date": "2024-04-15"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Athletics",
+              "available": true
+            },
+            {
+              "sport_name": "Gymnastics",
+              "available": true
+            },
+            {
+              "sport_name": "Martial Arts",
+              "available": true
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+      },
+      {
+        "college_image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+        "college_name": "Music and Harmony College",
+        "college_rating": 4.3,
+        "admission_date": "2023-09-10",
+        "number_of_research": 60,
+        "facilities": {
+          "events": [
+            {
+              "event_name": "Melody Fest",
+              "event_date": "2023-11-10"
+            },
+            {
+              "event_name": "Concert Night",
+              "event_date": "2024-03-25"
+            }
+          ],
+          "sports": [
+            {
+              "sport_name": "Singing",
+              "available": true
+            },
+            {
+              "sport_name": "Instrumental Music",
+              "available": true
+            },
+            {
+              "sport_name": "Choir",
+              "available": true
+            }
+          ]
+        },
+        "admission_details": {
+            "application_deadline": "2023-07-31",
+            "required_tests": ["SAT", "TOEFL"],
+            "admission_process": "Prospective students need to submit an online application form before the application deadline. Along with the application, they must provide SAT and TOEFL scores for international applicants. Shortlisted candidates will be invited for an interview. The final admission decision will be based on academic records, test scores, and interview performance.",
+            "scholarships_available": true,
+            "scholarship_details": "Academic Heights University offers various scholarships based on academic merit, extracurricular achievements, and financial need. Students can apply for scholarships through a separate scholarship application after receiving the admission offer."
+          }
+      }
+]

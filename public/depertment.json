@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Computer Science",
+      "head": "Dr. Jane Smith",
+      "location": "Building A, Room 101",
+      "phone": "123-456-7890"
+    },
+    {
+      "name": "Electrical Engineering",
+      "head": "Dr. John Doe",
+      "location": "Building B, Room 202",
+      "phone": "987-654-3210"
+    },
+    {
+      "name": "English Literature",
+      "head": "Prof. Emily Johnson",
+      "location": "Building C, Room 303",
+      "phone": "456-789-0123"
+    },
+    {
+      "name": "History",
+      "head": "Prof. Michael Brown",
+      "location": "Building D, Room 404",
+      "phone": "789-012-3456"
+    },
+    {
+      "name": "Biology",
+      "head": "Dr. Sarah Adams",
+      "location": "Building E, Room 505",
+      "phone": "321-654-0987"
+    }
+  ]
