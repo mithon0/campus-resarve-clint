@@ -4,6 +4,7 @@ import TitleSection from '../../Shared/TitleSections/TitleSection';
 import TopCollages from '../TopCollages/TopCollages';
 import { Link } from 'react-router-dom';
 import Depertments from '../Depertments/Depertments';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const [collages, setCollages] = useState([]);
@@ -23,6 +24,9 @@ const Home = () => {
   console.log(collages);
   return (
     <div>
+      <Helmet
+      title='Home'
+      ></Helmet>
       <Banner></Banner>
       <TitleSection
         header={"Top"}

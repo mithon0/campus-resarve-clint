@@ -48,11 +48,14 @@ import MyCollage from '../pages/MyCollage/MyCollage';
       },
       {
         path:'/admission',
-        element:<PrivetRouter><Admission></Admission></PrivetRouter>
+        element:<PrivetRouter><Admission></Admission></PrivetRouter>,
+        loader:async()=>fetch(`http://localhost:4000/collages`)
+
       },
       {
-        path:'/mycollage',
-        element:<PrivetRouter><MyCollage></MyCollage></PrivetRouter>
+        path:'mycollage/:email',
+        element:<PrivetRouter><MyCollage></MyCollage></PrivetRouter>,
+        loader:async({params})=>fetch(`http://localhost:4000/admission/${params?.email}`)
       }
     ]
     }

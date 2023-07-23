@@ -5,11 +5,11 @@ import reportWebVitals from './reportWebVitals';
 import {RouterProvider} from "react-router-dom";
 import router from './router/router';
 import AuthProvider from './AuthProvider/AuthProvider';
-
+import { HelmetProvider } from 'react-helmet-async';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthProvider><RouterProvider router={router}></RouterProvider></AuthProvider>
+    <HelmetProvider><AuthProvider><RouterProvider router={router}></RouterProvider></AuthProvider></HelmetProvider>
   </React.StrictMode>
 );
 

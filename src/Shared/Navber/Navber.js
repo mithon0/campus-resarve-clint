@@ -53,7 +53,7 @@ const Navber = () => {
                             <li><Link to="/">Home</Link></li>
                             <li><Link to={`/collages`}>Collages</Link></li>
                             <li><Link to="/admission">Admission</Link></li>
-                            <li><Link to="/mycollage">My College</Link></li>
+                            <li><Link to={`/mycollage/${user?.email}`}>My College</Link></li>
                         </ul>
                     </div>
                     <Link className="btn btn-ghost normal-case text-xl">CampusReserve</Link>
@@ -63,7 +63,7 @@ const Navber = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to={`/collages`}>Collages</Link></li>
                         <li><Link to="/admission">Admission</Link></li>
-                        <li><Link to="/mycollage">My College</Link></li>
+                        <li><Link to={`/mycollage/${user?.email}`}>My College</Link></li>
                         <form className='flex' >
                             <input name='search' type="text" placeholder="Search collages" className="input input-bordered w-full max-w-xs text-black" />
                             <button className='btn  btn-secondary'><FaSistrix className='text-xl' /></button>

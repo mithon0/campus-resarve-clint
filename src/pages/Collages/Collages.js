@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Star from '../../Shared/Star/Star';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -16,6 +17,9 @@ const Collages = () => {
 
   return (
     <div>
+      <Helmet
+      title='Collages'
+      ></Helmet>
       <h1 className='text-center text-2xl font-bold'>All Collages</h1>
       <div className='divider w-60 text-center mx-auto'></div>
 
