@@ -1,9 +1,18 @@
 
+import { useState } from 'react';
+import { FaSistrix } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
 const Navber = () => {
-    
+    const [name, setname] = useState(null)
+    const searchHandler = (e) => {
+        e.preventDefault()
+
+        const search = e.target.search.value
+        console.log(search);
+        setname(search)
+    }
 
     return (
         <div>
@@ -14,25 +23,29 @@ const Navber = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/collages">Collages</Link></li>
-                        <li><Link to="/admission">Admission</Link></li>
-                        <li><Link to="mycollage">My College</Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to={`/collages`}>Collages</Link></li>
+                            <li><Link to="/admission">Admission</Link></li>
+                            <li><Link to="mycollage">My College</Link></li>
                         </ul>
                     </div>
                     <Link className="btn btn-ghost normal-case text-xl">CampusReserve</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                    <li><Link to="/">Home</Link></li>
-                        <li><Link to="/collages">Collages</Link></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to={`/collages`}>Collages</Link></li>
                         <li><Link to="/admission">Admission</Link></li>
                         <li><Link to="/mycollage">My College</Link></li>
+                        <form className='flex' onSubmit={searchHandler}>
+                            <input name='search' type="text" placeholder="Search collages" className="input input-bordered w-full max-w-xs text-black" />
+                            <button className='btn  btn-secondary'><FaSistrix className='text-xl' /></button>
+                        </form>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn btn-outline">Login</Link>
-                   
+                    <Link to="/login" className="btn btn-outline">Login</Link>
+
                 </div>
             </div>
         </div>

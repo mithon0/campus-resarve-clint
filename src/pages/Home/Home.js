@@ -6,78 +6,78 @@ import { Link } from 'react-router-dom';
 import Depertments from '../Depertments/Depertments';
 
 const Home = () => {
-    const [collages,setCollages]=useState([]);
-    const [departments,setDepartments]=useState([])
-    const collage =collages.slice(0,4)
-    useEffect(()=>{
-        fetch('collage.json')
-        .then(res=>res.json())
-        .then(data=>setCollages(data))
-    },[]);
-    useEffect(()=>{
-        fetch('depertment.json')
-        .then(res=>res.json())
-        .then(data=>setDepartments(data))
-    })
+  const [collages, setCollages] = useState([]);
+  const [departments, setDepartments] = useState([])
+  const collage = collages.slice(0, 4)
+  useEffect(() => {
+    fetch('http://localhost:4000/collages')
+      .then(res => res.json())
+      .then(data => setCollages(data))
+  }, []);
+  useEffect(() => {
+    fetch('depertment.json')
+      .then(res => res.json())
+      .then(data => setDepartments(data))
+  })
 
-    console.log(collages);
-    return (
-        <div>
-           <Banner></Banner>
-           <TitleSection
-           header={"Top"}
-           subHeader={"Collages"}
-           ></TitleSection>
-          {/* Todo top collage card */}
+  console.log(collages);
+  return (
+    <div>
+      <Banner></Banner>
+      <TitleSection
+        header={"Top"}
+        subHeader={"Collages"}
+      ></TitleSection>
+      {/* Todo top collage card */}
 
-          <div className='grid grid-cols-3 '>
-          {
-            collage.map(collage=><TopCollages
+      <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+        {
+          collage.map(collage => <TopCollages
             collages={collage}
-            ></TopCollages>)
-          }
-         
-          </div>
-          <div className='flex justify-center'>
-          <Link to="/collages" className='btn btn-primary btn-outline'>See All</Link>
-          </div>
+          ></TopCollages>)
+        }
 
-          <TitleSection
-           header={"Top"}
-           subHeader={"Depertment"}
-           ></TitleSection>
-           {/* todo add dipertement */}
+      </div>
+      <div className='flex justify-center'>
+        <Link to="/collages" className='btn btn-primary btn-outline'>See All</Link>
+      </div>
 
-         
-           
-    <div className="overflow-x-auto mx-10 my-10">
-  <table className="table">
-    {/* head */}
-    <thead>
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Head</th>
-        <th>Phone</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-    {
-                departments.map((d,index)=><Depertments
+      <TitleSection
+        header={"Top"}
+        subHeader={"Depertment"}
+      ></TitleSection>
+      {/* todo add dipertement */}
+
+
+
+      <div className="overflow-x-auto lg:mx-10 lg:my-10 md:mx-5 md:my-5 sm:mx-0">
+        <table className="table">
+          {/* head */}
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Head</th>
+              <th>Phone</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              departments.map((d, index) => <Depertments
                 depertments={d}
                 index={index}
-                ></Depertments>)
+              ></Depertments>)
             }
-      
-    </tbody>
-  </table>
-</div>
+
+          </tbody>
+        </table>
+      </div>
 
 
-          
-        </div>
-    );
+
+    </div>
+  );
 };
 
 export default Home;
