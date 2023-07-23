@@ -20,14 +20,24 @@ const SignUp = () => {
         const email =fom.email.value;
         const password =fom.password.value;
         console.log(name,photo,email,password);
-
+      const user ={name:name ,photo,email}
 
         signupEmailPass(email,password)
         .then(res=>{
             console.log(res.user);
             updateUser(name,photo)
             .then(res=>{
-                
+                fetch('http://localhost:4000/users',{
+                  method:"POST",
+                  headers:{
+                    "content-type":"application/json"
+                  },
+                  body:JSON.stringify(user)
+                })
+                .then(res=>res.json())
+                .then(data=>console.log(data))
+
+
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
