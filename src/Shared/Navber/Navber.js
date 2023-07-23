@@ -1,19 +1,46 @@
 
-import { useState } from 'react';
+import { useContext } from 'react';
 import { FaSistrix } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Navber = () => {
-    const [name, setname] = useState(null)
-    const searchHandler = (e) => {
-        e.preventDefault()
+    // const [name, setname] = useState(null)
+    const {user,logOut}=useContext(AuthContext);
 
-        const search = e.target.search.value
-        console.log(search);
-        setname(search)
+    // const searchHandler = (e) => {
+    //     e.preventDefault()
+
+    //     const search = e.target.search.value
+    //     console.log(search);
+    //     setname(search)
+    // }
+
+    const logOutHandler =()=>{
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, LogOut'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                logOut()
+              Swal.fire(
+                'LogOut!',
+                'Your Account logOut success',
+                'success'
+              )
+            }
+          })
+        
+        
     }
-
+    
     return (
         <div>
             <div className="navbar glass bg-base-200">
@@ -37,15 +64,23 @@ const Navber = () => {
                         <li><Link to={`/collages`}>Collages</Link></li>
                         <li><Link to="/admission">Admission</Link></li>
                         <li><Link to="/mycollage">My College</Link></li>
-                        <form className='flex' onSubmit={searchHandler}>
+                        <form className='flex' >
                             <input name='search' type="text" placeholder="Search collages" className="input input-bordered w-full max-w-xs text-black" />
                             <button className='btn  btn-secondary'><FaSistrix className='text-xl' /></button>
                         </form>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login" className="btn btn-outline">Login</Link>
-
+                   {
+                    user? <Link onClick={logOutHandler} className="btn btn-outline">logOut</Link>: <Link to="/login" className="btn btn-outline">Login</Link>
+                   }
+                    {
+                        user? <div className="avatar">
+                        <div className="w-10 mask mask-hexagon">
+                         <Link to='/profile'> <img  className='w-full mask mask-hexagon' title={user.displayName} src={user.photoURL} /></Link>
+                        </div>
+                      </div>:<></>
+                    }
                 </div>
             </div>
         </div>

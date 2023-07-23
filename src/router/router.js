@@ -6,6 +6,10 @@ import Collages from '../pages/Collages/Collages';
 import CollageDetails from '../pages/CollageDetails/CollageDetails';
 import Login from '../pages/Login/Login';
 import SignUp from '../pages/SignUp/SignUp';
+import Profile from '../pages/Profile/Profile';
+import PrivetRouter from './PrivetRouter';
+import Admission from '../pages/Admission/Admission';
+import MyCollage from '../pages/MyCollage/MyCollage';
 
 
 
@@ -37,6 +41,18 @@ import SignUp from '../pages/SignUp/SignUp';
       {
         path:'/signup',
         element:<SignUp></SignUp>
+      },
+      {
+        path:'/profile',
+        element:<PrivetRouter><Profile></Profile></PrivetRouter>
+      },
+      {
+        path:'/admission',
+        element:<PrivetRouter><Admission></Admission></PrivetRouter>
+      },
+      {
+        path:'/mycollage',
+        element:<PrivetRouter><MyCollage></MyCollage></PrivetRouter>
       }
     ]
     }

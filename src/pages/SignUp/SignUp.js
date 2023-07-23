@@ -1,8 +1,58 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
+    const [show,setShow]=useState(true);
+
+    const {user,signupEmailPass,updateUser}=useContext(AuthContext)
+    console.log(user);
+    const navigate =useNavigate();
+    const location =useLocation();
+    const from =location.state?.from?.pathname || "/";
+    const submitHandler =(e)=>{
+        e.preventDefault();
+        const fom =e.target;
+        const name =fom.name.value;
+        const photo =fom.photo.value;
+        const email =fom.email.value;
+        const password =fom.password.value;
+        console.log(name,photo,email,password);
+
+
+        signupEmailPass(email,password)
+        .then(res=>{
+            console.log(res.user);
+            updateUser(name,photo)
+            .then(res=>{
+                
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'SignUp Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+                  navigate(from,{replace:true})
+            })
+            .catch(err=>{
+                console.log(err.message);
+            })
+
+        })
+        .catch(err=>console.log(err.message))
+
+
+    }
+    const showPass =()=>{
+        if(show===true){
+            setShow(false)
+        }else{
+            setShow(true)
+        }
+    }
     return (
         <div className="hero min-h-screen bg-base-200 lg:px-44">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -12,7 +62,8 @@ const SignUp = () => {
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
-              <div className="form-control">
+             <form onSubmit={submitHandler}>
+             <div className="form-control">
                 <label className="label">
                   <span className="label-text">Enter Full Name</span>
                 </label>
@@ -28,15 +79,15 @@ const SignUp = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="text" placeholder="email" className="input input-bordered" />
+                <input name='email' type="text" placeholder="email" className="input input-bordered" />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="text" placeholder="password" className="input input-bordered" />
+                <input name='password' type={!show ?"text":"password"} placeholder="password" className="input input-bordered" />
                 <label className="label">
-                <input type="checkbox"  className="checkbox checkbox-primary" />
+                <input onClick={showPass} type="checkbox"  className="checkbox checkbox-primary" />
                   <p>See PassWord</p>
                 </label>
               </div>
@@ -44,8 +95,9 @@ const SignUp = () => {
                 <button className="btn btn-primary">SignUp</button>
               </div>
               
+             </form>
               <div>
-                  <p>Already have an Account?<Link to='/login' className='text-primary underline'>SignUp</Link></p>
+                  <p>Already have an Account?<Link to='/login' className='text-primary underline'>Login</Link></p>
               </div>
               <div className='divider'>Or</div>
               <div className='mx-auto flex gap-8'>
