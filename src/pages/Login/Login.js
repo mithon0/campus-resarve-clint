@@ -3,9 +3,10 @@ import { Link,  useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 const Login = () => {
     const [show, setShow] = useState(true);
-    const { login,user } = useContext(AuthContext)
+    const { login,user,googlesignup,gitsignup } = useContext(AuthContext)
     const navigate =useNavigate();
     const location =useLocation();
     const from =location.state?.from?.pathname || "/";
@@ -34,6 +35,47 @@ console.log(user);
             console.log(err.message);
         })
 
+    };
+    const googlrProvider =new GoogleAuthProvider()
+    const googlehandler =()=>{
+        googlesignup(googlrProvider)
+        .then(result=>{
+            console.log(result.user);
+            const user ={name:result.user.displayName,photo:result.user.photoURL,email:result.user.email}
+            fetch('https://campus-reserve-server.vercel.app/users',{
+                  method:"POST",
+                  headers:{
+                    "content-type":"application/json"
+                  },
+                  body:JSON.stringify(user)
+                })
+                .then(res=>res.json())
+                .then(data=>console.log(data))
+
+
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'SignUp Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+          
+        })
+        .catch(err=>{
+            console.log(err.message);
+        })
+    }
+    const gitProvider =new GithubAuthProvider()
+    const githandler =()=>{
+        gitsignup(gitProvider)
+        .then(result=>{
+            console.log(result.user);
+          
+        })
+        .catch(err=>{
+            console.log(err.message);
+        })
     }
 
 
@@ -81,8 +123,8 @@ console.log(user);
                             </div>
                             <div className='divider'>Or</div>
                             <div className='mx-auto flex gap-8'>
-                                <button className='rounded-full btn btn-outline btn-primary'><FaGoogle /></button>
-                                <button className='rounded-full btn btn-outline btn-secondary'><FaGithub /></button>
+                                <button onClick={googlehandler} className='rounded-full btn btn-outline btn-primary'><FaGoogle /></button>
+                                <button onClick={githandler} className='rounded-full btn btn-outline btn-secondary'><FaGithub /></button>
                             </div>
                         </div>
                     </div>

@@ -3,11 +3,12 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const SignUp = () => {
     const [show,setShow]=useState(true);
 
-    const {user,signupEmailPass,updateUser}=useContext(AuthContext)
+    const {user,signupEmailPass,updateUser,googlesignup,gitsignup}=useContext(AuthContext)
     console.log(user);
     const navigate =useNavigate();
     const location =useLocation();
@@ -63,6 +64,49 @@ const SignUp = () => {
             setShow(true)
         }
     }
+
+    const googlrProvider =new GoogleAuthProvider()
+    const googlehandler =()=>{
+        googlesignup(googlrProvider)
+        .then(result=>{
+            console.log(result.user);
+            
+            const user ={name:result.user.displayName,photo:result.user.photoURL,email:result.user.email}
+            fetch('https://campus-reserve-server.vercel.app/users',{
+                  method:"POST",
+                  headers:{
+                    "content-type":"application/json"
+                  },
+                  body:JSON.stringify(user)
+                })
+                .then(res=>res.json())
+                .then(data=>console.log(data))
+
+
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'SignUp Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+          
+        })
+        .catch(err=>{
+            console.log(err.message);
+        })
+    }
+    const gitProvider =new GithubAuthProvider()
+    const githandler =()=>{
+        gitsignup(gitProvider)
+        .then(result=>{
+            console.log(result.user);
+          
+        })
+        .catch(err=>{
+            console.log(err.message);
+        })
+    }
     return (
         <div className="hero min-h-screen bg-base-200 lg:px-44">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -111,8 +155,8 @@ const SignUp = () => {
               </div>
               <div className='divider'>Or</div>
               <div className='mx-auto flex gap-8'>
-                  <button className='rounded-full btn btn-outline btn-primary'><FaGoogle/></button>
-                  <button className='rounded-full btn btn-outline btn-secondary'><FaGithub/></button>
+                  <button onClick={googlehandler} className='rounded-full btn btn-outline btn-primary'><FaGoogle/></button>
+                  <button onClick={githandler} className='rounded-full btn btn-outline btn-secondary'><FaGithub/></button>
               </div>
             </div>
           </div>
