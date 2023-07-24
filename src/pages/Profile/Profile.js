@@ -8,7 +8,7 @@ const Profile = () => {
     const [newUser, setUser] = useState()
 
     useEffect(() => {
-        fetch(`http://localhost:4000/user/${user.email}`)
+        fetch(`https://campus-reserve-server.vercel.app/user/${user.email}`)
             .then(res => res.json())
             .then(data => setUser(data))
     }, []);
@@ -42,7 +42,7 @@ const Profile = () => {
             confirmButtonText: 'Yes, Update!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch('http://localhost:4000/updateusers', {
+                fetch('https://campus-reserve-server.vercel.app/updateusers', {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json"

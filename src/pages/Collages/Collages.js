@@ -12,7 +12,7 @@ const Collages = () => {
   console.log(collage);
 
   // // useEffect(()=>{
-  // //   fetch(`http://localhost:4000/collages/Artistic%20Expressions%20College`)
+  // //   fetch(`https://campus-reserve-server.vercel.app/collages/Artistic%20Expressions%20College`)
   // // })
 
   return (

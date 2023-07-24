@@ -31,7 +31,7 @@ const Admission = () => {
             collage,
            collage_id: id}
             console.log(candidateData);
-        fetch('http://localhost:4000/admission',{
+        fetch('https://campus-reserve-server.vercel.app/admission',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

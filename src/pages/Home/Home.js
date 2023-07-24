@@ -13,7 +13,7 @@ const Home = () => {
   const [departments, setDepartments] = useState([])
   const collage = collages.slice(0, 4)
   useEffect(() => {
-    fetch('http://localhost:4000/collages')
+    fetch('https://campus-reserve-server.vercel.app/collages')
       .then(res => res.json())
       .then(data => setCollages(data))
   }, []);

@@ -26,14 +26,14 @@ import Error from '../pages/Error/Error';
       {
         path:'/collages',
         element:<Collages></Collages>,
-        loader:async()=>fetch(`http://localhost:4000/collages`)
+        loader:async()=>fetch(`https://campus-reserve-server.vercel.app/collages`)
 
       },
       {
         path:"details/:id",
         element:<CollageDetails></CollageDetails>,
         
-        loader:async({params})=>fetch(`http://localhost:4000/collages/${params.id}`)
+        loader:async({params})=>fetch(`https://campus-reserve-server.vercel.app/collages/${params.id}`)
         
       },
       {
@@ -51,13 +51,13 @@ import Error from '../pages/Error/Error';
       {
         path:'/admission',
         element:<PrivetRouter><Admission></Admission></PrivetRouter>,
-        loader:async()=>fetch(`http://localhost:4000/collages`)
+        loader:async()=>fetch(`https://campus-reserve-server.vercel.app/collages`)
 
       },
       {
         path:'mycollage/:email',
         element:<PrivetRouter><MyCollage></MyCollage></PrivetRouter>,
-        loader:async({params})=>fetch(`http://localhost:4000/admission/${params?.email}`)
+        loader:async({params})=>fetch(`https://campus-reserve-server.vercel.app/admission/${params?.email}`)
       }
     ]
     }

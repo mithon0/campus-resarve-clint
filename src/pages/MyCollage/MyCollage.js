@@ -6,7 +6,7 @@ const MyCollage = () => {
     // const [a, setAdmission] = useState();
     // const { user } = useContext(AuthContext)
     // useEffect(() => {
-    //     fetch(`http://localhost:4000/admission/${user?.email}`)
+    //     fetch(`https://campus-reserve-server.vercel.app/admission/${user?.email}`)
     //         .then(res => res.json())
     //         .then(data => setAdmission(data))
     // })

@@ -27,7 +27,7 @@ const SignUp = () => {
             console.log(res.user);
             updateUser(name,photo)
             .then(res=>{
-                fetch('http://localhost:4000/users',{
+                fetch('https://campus-reserve-server.vercel.app/users',{
                   method:"POST",
                   headers:{
                     "content-type":"application/json"
