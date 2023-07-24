@@ -10,6 +10,7 @@ import Profile from '../pages/Profile/Profile';
 import PrivetRouter from './PrivetRouter';
 import Admission from '../pages/Admission/Admission';
 import MyCollage from '../pages/MyCollage/MyCollage';
+import Error from '../pages/Error/Error';
 
 
 
@@ -17,6 +18,7 @@ import MyCollage from '../pages/MyCollage/MyCollage';
     {
       path: "/",
       element: <Main></Main>,
+      errorElement:<Error></Error>,
       children:[{
         path:"/",
         element:<Home></Home>

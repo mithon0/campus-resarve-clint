@@ -5,6 +5,8 @@ import TopCollages from '../TopCollages/TopCollages';
 import { Link } from 'react-router-dom';
 import Depertments from '../Depertments/Depertments';
 import { Helmet } from 'react-helmet-async';
+import Exp from '../../ExtraSection/Exp';
+import Galery from '../../ExtraSection/Galery';
 
 const Home = () => {
   const [collages, setCollages] = useState([]);
@@ -45,7 +47,7 @@ const Home = () => {
       <div className='flex justify-center'>
         <Link to="/collages" className='btn btn-primary btn-outline'>See All</Link>
       </div>
-
+<Exp></Exp>
       <TitleSection
         header={"Top"}
         subHeader={"Depertment"}
@@ -79,7 +81,7 @@ const Home = () => {
       </div>
 
 
-
+<Galery></Galery>
     </div>
   );
 };

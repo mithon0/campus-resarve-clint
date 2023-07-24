@@ -98,41 +98,41 @@ const Profile = () => {
                                             <label className="label">
                                                 <span className="label-text">Email</span>
                                             </label>
-                                            <input disabled name='email' defaultValue={user.email} type="email" placeholder="email" className="input input-bordered" />
+                                            <input disabled name='email' defaultValue={user?.email} type="email" placeholder="email" className="input input-bordered" />
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">Name</span>
                                             </label>
-                                            <input name='name' defaultValue={user.displayName} type="text" placeholder="Name" className="input input-bordered" />
+                                            <input name='name' defaultValue={user?.displayName} type="text" placeholder="Name" className="input input-bordered" />
 
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">PhotoURL</span>
                                             </label>
-                                            <input name='photo' type="text" placeholder="PhotoUrl" className="input input-bordered" />
+                                            <input defaultValue={newUser?.photo} name='photo' type="text" placeholder="PhotoUrl" className="input input-bordered" />
 
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">Gender</span>
                                             </label>
-                                            <input name='gender' type="gender" placeholder="Male or female" className="input input-bordered" />
+                                            <input defaultValue={newUser?.gender} name='gender' type="gender" placeholder="Male or female" className="input input-bordered" />
 
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">Address</span>
                                             </label>
-                                            <input name='address' type="text" placeholder="Address" className="input input-bordered" />
+                                            <input defaultValue={newUser?.address} name='address' type="text" placeholder="Address" className="input input-bordered" />
 
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">Phone</span>
                                             </label>
-                                            <input name='number' type="text" placeholder="PhonNumber" className="input input-bordered" />
+                                            <input defaultValue={newUser?.number} name='number' type="text" placeholder="PhonNumber" className="input input-bordered" />
 
                                         </div>
                                         <div className="form-control mt-6">
